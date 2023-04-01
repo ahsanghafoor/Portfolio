@@ -30,12 +30,12 @@ export const projectsData = [
   },
   {
     id: 3,
-    projectName: "Weather App",
+    projectName: "Portfolio Website",
     projectDesc:
-      "Weather forecast systems and applications predict weather conditions based on multiple parameters.",
-    tags: ["React", "Html/CSS", "Material Ui"],
-    code: "",
-    demo: "",
+      "A portfolio website is a digital resume that showcases your work and skills to potential clients or employers. It should be visually appealing, easy to navigate and include content to help you stand out in a competitive job market.",
+    tags: ["React", "JavaScript", "Html/CSS", "Bootstrap"],
+    code: "https://github.com/ahsanghafoor/Portfolio",
+    demo: "https://ahsanghafoor-portfolio.netlify.app/",
     image: three,
   },
   // {
