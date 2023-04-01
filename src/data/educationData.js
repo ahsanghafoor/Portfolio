@@ -1,7 +1,7 @@
 export const educationData = [
   {
     id: 1,
-    institution: "Univesity of Punjab",
+    institution: "University of Punjab",
     course: "BS (Hons) IT",
     startYear: "2018",
     endYear: "2022",
