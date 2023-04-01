@@ -9,7 +9,7 @@ import css from "../assets/svg/skills/css.svg";
 import angular from "../assets/svg/skills/angular.svg";
 import javascript from "../assets/svg/skills/javascript.svg";
 import nextJS from "../assets/svg/skills/nextJS.svg";
-import nodeJS from "../assets/svg/skills/NodeJS.svg";
+import nodeJS from "../assets/svg/skills/nodeJS.svg";
 import nuxtJS from "../assets/svg/skills/nuxtJS.svg";
 import react from "../assets/svg/skills/react.svg";
 import svelte from "../assets/svg/skills/svelte.svg";

@@ -5,7 +5,7 @@ export const headerData = {
   name: "Ahsan Ghafoor",
   title: "MERN Stack Developer",
   desciption:
-    "I'm a fresh graduate with a degree of BS(hons)IT and specialization in web development",
+    "As a recent graduate from the University of Punjab, I am skilled in the MERN Stack and hold a Bachelor of Science degree in Information Technology. ",
   image: profile,
   resumePdf: resume,
 };
