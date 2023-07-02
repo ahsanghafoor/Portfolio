@@ -5,7 +5,7 @@ export const headerData = {
   name: "Ahsan Ghafoor",
   title: "MERN Stack Developer",
   desciption:
-    "As a recent graduate from the University of Punjab, I am skilled in the MERN Stack and hold a Bachelor of Science degree in Information Technology. ",
+    "Motivated IT graduate with hands-on experience in MERN stack development and working on various different projects.Passionate about continuous learning and driving team success.Equipped with a strong foundation in MERN stack technologies, I am poised to bring valuable contributions to your organization’s development initiatives.",
   image: profile,
   resumePdf: resume,
 };

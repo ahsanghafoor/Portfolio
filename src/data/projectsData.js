@@ -1,11 +1,11 @@
 import one from "../assets/svg/projects/one.svg";
 import two from "../assets/svg/projects/two.svg";
 import three from "../assets/svg/projects/three.svg";
-// import four from "../assets/svg/projects/four.svg";
-// import five from "../assets/svg/projects/five.svg";
-// import six from "../assets/svg/projects/six.svg";
-// import seven from "../assets/svg/projects/seven.svg";
-// import eight from "../assets/svg/projects/eight.svg";
+import four from "../assets/svg/projects/four.svg";
+import five from "../assets/svg/projects/five.svg";
+import six from "../assets/svg/projects/six.svg";
+import seven from "../assets/svg/projects/seven.svg";
+import eight from "../assets/svg/projects/eight.svg";
 
 export const projectsData = [
   {
@@ -38,43 +38,43 @@ export const projectsData = [
     demo: "https://ahsanghafoor-portfolio.netlify.app/",
     image: three,
   },
-  // {
-  //   id: 4,
-  //   projectName: "Android Patient Tracker",
-  //   projectDesc:
-  //     "This project involves the development of an Android application for viewing and managing patient data.",
-  //   tags: ["Flutter", "Firebase"],
-  //   code: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   image: four,
-  // },
-  // {
-  //   id: 5,
-  //   projectName: "E-Commerce App",
-  //   projectDesc: "A Simple E-commerce application",
-  //   tags: ["React Native", "Firebase"],
-  //   code: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   image: five,
-  // },
-  // {
-  //   id: 6,
-  //   projectName: "Uber Lite",
-  //   projectDesc: "Uber clone",
-  //   tags: ["Flutter"],
-  //   code: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   image: six,
-  // },
-  // {
-  //   id: 7,
-  //   projectName: "Stock Market App",
-  //   projectDesc: "A simple stock market API app",
-  //   tags: ["React", "Redux", "Bootstrap"],
-  //   code: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   demo: "https://github.com/hhhrrrttt222111/developer-portfolio",
-  //   image: seven,
-  // },
+  {
+    id: 4,
+    projectName: "Nifty - NFT Marketplace",
+    projectDesc:
+      "Developed the real-time Notifications module for Nifty, a marketplace similar to OpenSea",
+    tags: ["ExpressJS", "ReactJS", "MongoDB", "NodeJS"],
+    code: "",
+    demo: "",
+    image: four,
+  },
+  {
+    id: 5,
+    projectName: "CANTOVERSE - Backend Development",
+    projectDesc: "Contributed to the backend development of CANTOVERSE, a Unity game",
+    tags: ["ExpressJS", "MongoDB", "NodeJS", "AWS"],
+    code: "",
+    demo: "",
+    image: five,
+  },
+  {
+    id: 6,
+    projectName: "MODERN POKER CLUB - Backend Development",
+    projectDesc: "Played a key role in the backend development of MODERN POKER CLUB, a replica of Global Poker.",
+    tags: ["ExpressJS", "MongoDB", "NodeJS"],
+    code: "",
+    demo: "",
+    image: six,
+  },
+  {
+    id: 7,
+    projectName: "Admin Panel Development - MODERN POKER CLUB ",
+    projectDesc: "Currently involved in developing the Admin Panel for MODERN POKER CLUB, leveraging expertise in both frontend and backend development",
+    tags: ["ReactJS", "Redux", "Bootstrap"],
+    code: "",
+    demo: "",
+    image: seven,
+  },
   // {
   //   id: 8,
   //   projectName: "Car Pooling System",

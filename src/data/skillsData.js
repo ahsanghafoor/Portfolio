@@ -7,13 +7,14 @@ export const skillsData = [
   "React",
   "nodeJS",
   "Bootstrap",
+  "MaterialUI",
   "MySQL",
   "MongoDB",
   "Microsoft Office",
   "Photoshop",
   "Illustrator",
   "Canva",
-  "MaterialUI",
+
 ];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
