@@ -1,4 +1,5 @@
-import resume from "../assets/pdf/resume.pdf";
+// import resume from "../assets/pdf/resume.pdf";
+import resume from "../assets/pdf/ahsanMERNDev.pdf";
 import profile from "../assets/Profile/image.jpg";
 
 export const headerData = {

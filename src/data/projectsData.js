@@ -1,6 +1,7 @@
 import one from "../assets/svg/projects/one.svg";
 import two from "../assets/svg/projects/two.svg";
 import three from "../assets/svg/projects/three.svg";
+import ecommerce from "../assets/svg/projects/ecommerce.svg";
 import four from "../assets/svg/projects/four.svg";
 import five from "../assets/svg/projects/five.svg";
 import six from "../assets/svg/projects/six.svg";
@@ -10,6 +11,24 @@ import eight from "../assets/svg/projects/eight.svg";
 export const projectsData = [
   {
     id: 1,
+    projectName: "MODERN POKER CLUB - Backend Development",
+    projectDesc: "Contributed to backend development and Admin Panel Design for MODERN POKER CLUB Game, including user authentication APIs, game creation and management APIs, and socket.io integration for real - time updates.",
+    tags: ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "AWS", "Socket.io"],
+    code: "",
+    demo: "https://modernpokerclub.com/",
+    image: six,
+  },
+  {
+    id: 2,
+    projectName: "Metamart - An Ecommerce Game",
+    projectDesc: "Contributed to the backend development of the Metamart online shopping game, Additionally, developed an admin panel for managing the Metamart game with game statistics",
+    tags: ["ReactJS", "ExpressJS", "Redux", "MySQL", "NodeJS", "AWS"],
+    code: "",
+    demo: "",
+    image: ecommerce,
+  },
+  {
+    id: 3,
     projectName: "Donate Happiness",
     projectDesc:
       "A charity based web app designed to facilitate charitable giving and support for various causes and organizations.",
@@ -19,7 +38,16 @@ export const projectsData = [
     image: one,
   },
   {
-    id: 2,
+    id: 4,
+    projectName: "CANTOVERSE - Backend Development",
+    projectDesc: "Contributed to the backend development of CANTOVERSE, a Unity game",
+    tags: ["ExpressJS", "MongoDB", "NodeJS", "AWS"],
+    code: "",
+    demo: "",
+    image: five,
+  },
+  {
+    id: 5,
     projectName: "E-Commerce Website",
     projectDesc:
       "A website that allows people to buy and sell physical goods, services, and digital products over the internet rather than at a brick-and-mortar location.",
@@ -29,7 +57,7 @@ export const projectsData = [
     image: two,
   },
   {
-    id: 3,
+    id: 6,
     projectName: "Portfolio Website",
     projectDesc:
       "A portfolio website is a digital resume that showcases your work and skills to potential clients or employers. It should be visually appealing, easy to navigate and include content to help you stand out in a competitive job market.",
@@ -39,7 +67,7 @@ export const projectsData = [
     image: three,
   },
   {
-    id: 4,
+    id: 7,
     projectName: "Nifty - NFT Marketplace",
     projectDesc:
       "Developed the real-time Notifications module for Nifty, a marketplace similar to OpenSea",
@@ -48,33 +76,8 @@ export const projectsData = [
     demo: "",
     image: four,
   },
-  {
-    id: 5,
-    projectName: "CANTOVERSE - Backend Development",
-    projectDesc: "Contributed to the backend development of CANTOVERSE, a Unity game",
-    tags: ["ExpressJS", "MongoDB", "NodeJS", "AWS"],
-    code: "",
-    demo: "",
-    image: five,
-  },
-  {
-    id: 6,
-    projectName: "MODERN POKER CLUB - Backend Development",
-    projectDesc: "Played a key role in the backend development of MODERN POKER CLUB, a replica of Global Poker.",
-    tags: ["ExpressJS", "MongoDB", "NodeJS"],
-    code: "",
-    demo: "",
-    image: six,
-  },
-  {
-    id: 7,
-    projectName: "Admin Panel Development - MODERN POKER CLUB ",
-    projectDesc: "Currently involved in developing the Admin Panel for MODERN POKER CLUB, leveraging expertise in both frontend and backend development",
-    tags: ["ReactJS", "Redux", "Bootstrap"],
-    code: "",
-    demo: "",
-    image: seven,
-  },
+
+
   // {
   //   id: 8,
   //   projectName: "Car Pooling System",

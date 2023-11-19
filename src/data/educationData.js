@@ -13,11 +13,11 @@ export const educationData = [
     startYear: "2016",
     endYear: "2018",
   },
-  {
-    id: 3,
-    institution: 'Govt. High School',
-    course: 'Matriculation',
-    startYear: '2014',
-    endYear: '2016'
-  },
+  // {
+  //   id: 3,
+  //   institution: 'Govt. High School',
+  //   course: 'Matriculation',
+  //   startYear: '2014',
+  //   endYear: '2016'
+  // },
 ];
