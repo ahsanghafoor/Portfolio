@@ -70,7 +70,7 @@ const HeroSection = () => {
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/50 bg-card">
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20">
                   <User className="w-24 h-24 sm:w-24 sm:h-24 text-primary/60" />
-                  <img src={"src/data/profile.jpg"} alt="Profile Picture" width={250} height={250} className="object-cover w-full h-full" />
+                  <img src={"/images/profile.jpg"} alt="Profile Picture" width={250} height={250} className="object-cover w-full h-full" />
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="/data/resume.pdf"
+              href="/resume.pdf"
               download
               className="px-6 py-3 border-2 bg-primary-foreground  border-accent/50 text-accent font-mono font-semibold rounded-xl hover:border-accent hover:bg-accent/10 transition-all duration-300 text-sm flex items-center gap-2"
             >

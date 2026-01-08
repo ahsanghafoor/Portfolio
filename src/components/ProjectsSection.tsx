@@ -17,7 +17,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       <div className="relative h-48 md:h-64 bg-gradient-to-br from-muted to-surface-dark overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src={`src/data/${project.src}`}
+            src={`/images/${project.src}`}
             alt={project.imagePrompt}
             className="w-full h-full object-cover opacity-50"
           />
