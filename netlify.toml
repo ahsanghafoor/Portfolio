@@ -1,0 +1,32 @@
+[build]
+  # Build command
+  command = "npm run build"
+  
+  # Directory to publish (Vite default output)
+  publish = "dist"
+  
+  # Node version
+  environment = { NODE_VERSION = "18.20.2" }
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = false
+
+[build.processing.images]
+  compress = true
+
+# Redirect all requests to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
