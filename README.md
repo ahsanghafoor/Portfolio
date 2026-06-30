@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# Ahsan Ghafoor — Portfolio
 
-## Project info
+Personal portfolio for Ahsan Ghafoor, a full-stack software engineer. Built with
+Vite + React + TypeScript, animated with GSAP (ScrollTrigger), Lenis smooth
+scroll, and a small react-three-fiber accent in the hero.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Stack
 
-## How can I edit this code?
+- **Vite + React 18 + TypeScript**
+- **GSAP + ScrollTrigger** — fade/slide reveals, magnetic buttons, card tilt
+- **Lenis** — smooth scrolling
+- **react-three-fiber + drei** — one lightweight 3D hero accent (desktop only,
+  loaded on idle so mobile never downloads it)
+- **Tailwind** (utilities) + a custom CSS design system in `src/index.css`
+- **sonner** — contact-form toasts
 
-There are several ways of editing your application.
+## Content
 
-**Use Lovable**
+All copy lives in [`src/data/portfolio-data.ts`](src/data/portfolio-data.ts) —
+edit that one file to update the hero, toolkit, projects, experience, education,
+and links. The portrait is `public/images/portrait.webp`; the résumé is
+`public/resume.pdf`.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Develop
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm install
+npm run dev      # http://localhost:8080
+npm run build    # production build → dist/
+npm run preview  # preview the production build
 ```
 
-**Edit a file directly in GitHub**
+## Sections
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+`src/components/portfolio/`: Nav, Hero, Marquee, Toolkit, About, Work,
+Experience, Contact, Footer. Animation/interaction logic is in `src/hooks/`
+(`useSmoothScroll`, `useScrollReveal`, `useInteractions`).
 
-**Use GitHub Codespaces**
+## Accessibility & performance
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Respects `prefers-reduced-motion` (reveals show instantly, smooth scroll and
+  pointer effects disabled).
+- Reveals are armed only when JS is present, so the page is never stuck invisible
+  without JavaScript.
+- The 3D chunk is code-split and gated to capable desktops.
 
-## What technologies are used for this project?
+## Deploy
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Configured for Netlify (`netlify.toml`): `npm run build`, publish `dist/`, SPA
+redirect to `index.html`.
