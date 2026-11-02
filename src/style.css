@@ -31,7 +31,7 @@ a { color: var(--blue); }
 .nav-links a:hover { color: var(--blue); }
 
 /* Hero */
-.hero { background: linear-gradient(180deg, #f2f7ff 0%, #ffffff 100%); padding: 64px 0 56px; }
+.hero { background: linear-gradient(180deg, #f2f7ff 0%, #ffffff 100%); padding: 44px 0 36px; }
 .hero-inner { display: flex; gap: 48px; align-items: center; }
 .hero-text { flex: 1; }
 .eyebrow { color: var(--blue); font-weight: 700; letter-spacing: .4px; text-transform: uppercase; font-size: 13px; }
@@ -44,7 +44,7 @@ a { color: var(--blue); }
 .hero-stats b { display: block; font-size: 26px; color: var(--navy); }
 .hero-stats span { font-size: 13.5px; color: var(--muted); }
 .hero-photo { position: relative; flex: none; }
-.hero-photo img { width: 470px; height: 648px; object-fit: cover; border-radius: 28px; box-shadow: 0 28px 56px rgba(14, 28, 51, .22); }
+.hero-photo img { width: 400px; height: 540px; object-fit: cover; border-radius: 28px; box-shadow: 0 28px 56px rgba(14, 28, 51, .22); }
 .photo-badge { position: absolute; left: -18px; bottom: 26px; background: var(--blue-dark); color: #fff; border-radius: 12px; padding: 12px 16px; box-shadow: 0 10px 24px rgba(11, 42, 107, .3); }
 .photo-badge b { display: block; font-size: 14px; }
 .photo-badge span { font-size: 12.5px; color: #cfe0ff; }
