@@ -66,6 +66,7 @@ const projects = [
     title: "Firefox Ads Platform",
     tag: "Client project",
     category: "Platforms",
+    icon: true,
     desc: "Large scale ad delivery platform built with the Mozilla Firefox ads team, covering campaign delivery and performance at scale.",
     tech: ["React", "Django", "Python", "PostgreSQL"],
     metric: "",
@@ -120,8 +121,40 @@ function linkOrTag(p) {
   return `<span class="project-tag">${p.tag}</span>`;
 }
 
+function sliderHTML(p) {
+  const slides = IMAGES[p.slug];
+  const inner = slides.map((s, i) => `<div class="slide${p.icon ? " icon" : ""}"><img src="${s}" alt="${p.title} preview" ${i === 0 ? "" : 'loading="lazy"'}></div>`).join("");
+  const controls = slides.length > 1 ? `<button class="slide-btn prev" aria-label="Previous image">‹</button><button class="slide-btn next" aria-label="Next image">›</button><div class="dots">${slides.map((_, i) => `<button class="dot${i === 0 ? " active" : ""}" aria-label="Go to image ${i + 1}"></button>`).join("")}</div>` : "";
+  return `<div class="slider" data-slider><div class="slides">${inner}</div>${controls}</div>`;
+}
+
+function initSliders() {
+  document.querySelectorAll("[data-slider]").forEach(slider => {
+    if (slider.dataset.init) return;
+    slider.dataset.init = "1";
+    const track = slider.querySelector(".slides");
+    const slides = slider.querySelectorAll(".slide");
+    const dots = slider.querySelectorAll(".dot");
+    if (slides.length < 2) return;
+    let idx = 0, timer = null;
+    const go = i => {
+      idx = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, j) => d.classList.toggle("active", j === idx));
+    };
+    const play = () => { timer = setInterval(() => go(idx + 1), 4500); };
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+    slider.querySelector(".prev").addEventListener("click", () => { stop(); go(idx - 1); play(); });
+    slider.querySelector(".next").addEventListener("click", () => { stop(); go(idx + 1); play(); });
+    dots.forEach((d, j) => d.addEventListener("click", () => { stop(); go(j); play(); }));
+    slider.addEventListener("mouseenter", stop);
+    slider.addEventListener("mouseleave", play);
+    play();
+  });
+}
+
 document.getElementById("featured").innerHTML = `
-  <img src="${IMAGES[featured.slug]}" alt="${featured.title} preview">
+  <div class="featured-img">${sliderHTML(featured)}</div>
   <div class="featured-body">
     <span class="flag">Featured project</span>
     <h3>${featured.title}</h3>
@@ -134,7 +167,7 @@ document.getElementById("featured").innerHTML = `
 document.getElementById("featured").classList.add("reveal");
 document.getElementById("projects-list").innerHTML = rest.map((p, i) => `
   <article class="showcase-row reveal${i % 2 === 1 ? " flip" : ""}" data-category="${p.category}">
-    <div class="showcase-img"><img src="${IMAGES[p.slug]}" alt="${p.title} preview" loading="lazy"></div>
+    <div class="showcase-img">${sliderHTML(p)}</div>
     <div class="showcase-body">
       <span class="project-cat">${p.category}</span>
       <h3>${p.title}</h3>
@@ -144,6 +177,8 @@ document.getElementById("projects-list").innerHTML = rest.map((p, i) => `
       <div class="showcase-foot">${linkOrTag(p)}</div>
     </div>
   </article>`).join("");
+
+initSliders();
 
 document.querySelectorAll("#filters .filter-chip").forEach(chip => {
   chip.addEventListener("click", () => {
