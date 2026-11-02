@@ -114,8 +114,6 @@ const projects = [
   }
 ];
 
-const [featured, ...rest] = projects;
-
 function linkOrTag(p) {
   if (p.link) return `<a class="btn btn-outline btn-sm" href="${p.link}" target="_blank" rel="noopener">Visit live site ↗</a>`;
   return `<span class="project-tag">${p.tag}</span>`;
@@ -153,23 +151,11 @@ function initSliders() {
   });
 }
 
-document.getElementById("featured").innerHTML = `
-  <div class="featured-img">${sliderHTML(featured)}</div>
-  <div class="featured-body">
-    <span class="flag">Featured project</span>
-    <h3>${featured.title}</h3>
-    <p>${featured.desc}</p>
-    <div class="tags" style="margin-top:14px">${featured.tech.map(t => `<span>${t}</span>`).join("")}</div>
-    ${featured.metric ? `<p class="project-metric" style="margin-top:14px">${featured.metric}</p>` : ""}
-    <p class="project-tag" style="margin-top:12px">${featured.tag}</p>
-  </div>`;
-
-document.getElementById("featured").classList.add("reveal");
-document.getElementById("projects-list").innerHTML = rest.map((p, i) => `
+document.getElementById("projects-list").innerHTML = projects.map((p, i) => `
   <article class="showcase-row reveal${i % 2 === 1 ? " flip" : ""}" data-category="${p.category}">
     <div class="showcase-img">${sliderHTML(p)}</div>
     <div class="showcase-body">
-      <span class="project-cat">${p.category}</span>
+      <div class="project-head"><span class="project-num">${String(i + 1).padStart(2, "0")}</span><span class="project-cat">${p.category}</span></div>
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
       <div class="tags">${p.tech.map(t => `<span>${t}</span>`).join("")}</div>
